@@ -68,8 +68,6 @@ class Serie:
 		if filename.rfind('\\') != -1:	
 			filename = filename[filename.rfind('\\') + 1:len(filename)]
 		self.fileIsAvailable(filename)
-		
-
 		for regex, regex_num in episode_rexps:
 			match = re.search(regex, filename, re.IGNORECASE)
 			if match:
@@ -79,7 +77,9 @@ class Serie:
 				filename = self.fileName[0:match.start() - 2]
 			elif regex_num == 2:
 				filename = self.fileName[match.end() + 1::]
-			self.serieName = filename
+			self.serieName = filename.replace('.', ' ')
+			print self.serieName
+			os.system("pause")
 			self.serieSeason = match.groupdict()['season']
 			self.serieEpisode = match.groupdict()['episode'][1::]
 			print self.serieName
