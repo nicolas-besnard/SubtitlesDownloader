@@ -10,7 +10,6 @@ from xml.dom.minidom import parseString
 import zipfile
 import hashlib
 import json
-import guessit
 
 class Serie:
 	"""
@@ -146,10 +145,10 @@ class Serie:
 
 	def downloadSubtitle(self):
 		print "Download of "+ self.serieName +" S"+ self.serieSeason +"E"+ self.serieEpisode
-		# define zip file name
-		zip_file_name = self.serieName + self.serieSeason + self.serieEpisode
-		urlretrieve(self.url, zip_file_name)
-		zFile = zipfile.ZipFile(zip_file_name, "r")
+		# define subtitle file name
+		subtitle_file_name = self.serieName + self.serieSeason + self.serieEpisode
+		urlretrieve(self.url, subtitle_file_name)
+		zFile = zipfile.ZipFile(subtitle_file_name, "r")
 		for data in zFile.infolist():
 			# Get file name / extension of current file in zip
 			fileName, fileExtension = self.getFiletype(data.filename)
@@ -159,7 +158,7 @@ class Serie:
 			fout.write(info +"."+ self.fileExtension)
 			fout.close()
 		zFile.close()
-		os.remove(zip_file_name)
+		os.remove(subtitle_file_name)
 
 import glob
 import urlparse
@@ -184,6 +183,7 @@ if __name__ == "__main__":
 		name = "[02x01] Suits.mkv"
 		#name = "[04x01] Glee.avi"
 		name = "Gossip.Girl.S06E01.720p.HDTV.X264-DIMENSION.mkv"
+		name = "[03x01] The Unit.avi"
 	
 	subtitle = Serie()
 	subtitle.getSerieInfosFromFilename(name)
