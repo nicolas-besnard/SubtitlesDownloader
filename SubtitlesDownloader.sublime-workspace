@@ -1,0 +1,619 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getFiletype"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"serie",
+				"serieName"
+			],
+			[
+				"subti",
+				"subtitlesLanguage"
+			],
+			[
+				"ser",
+				"serieName"
+			],
+			[
+				"epi",
+				"episode_rexps"
+			],
+			[
+				"episode",
+				"episode"
+			],
+			[
+				"con",
+				"confidence"
+			],
+			[
+				"ulr",
+				"urlConstructor"
+			],
+			[
+				"err",
+				"errorCode"
+			],
+			[
+				"sear",
+				"searchSubtitle"
+			],
+			[
+				"api",
+				"apiKey"
+			],
+			[
+				"serieNameFomr",
+				"serieNameFromServer"
+			],
+			[
+				"cou",
+				"countryName"
+			],
+			[
+				"Doc",
+				"Doctrine_Query"
+			],
+			[
+				"MEM_",
+				"MEM_lastConnexionDate"
+			],
+			[
+				"check_",
+				"check_mail"
+			],
+			[
+				"chec",
+				"check_mail"
+			],
+			[
+				"userna",
+				"username_is_correct"
+			],
+			[
+				"Ma",
+				"MailException"
+			],
+			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"form",
+				"format_src"
+			],
+			[
+				"subtit",
+				"subtitle_language"
+			],
+			[
+				"userNam",
+				"usernameExist"
+			],
+			[
+				"password",
+				"password"
+			],
+			[
+				"pas",
+				"password_confirmation"
+			],
+			[
+				"username",
+				"usernameExist"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"_pas",
+				"_password_confirmation"
+			],
+			[
+				"method",
+				"method_exists"
+			],
+			[
+				"have_",
+				"have_both_password_different"
+			],
+			[
+				"playli",
+				"playlist_value"
+			],
+			[
+				"connect",
+				"connector-top"
+			],
+			[
+				"play",
+				"playlist_value"
+			],
+			[
+				"playlist",
+				"playlistID"
+			],
+			[
+				"pla",
+				"playlistID"
+			],
+			[
+				"qt",
+				"QtGui"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 6168,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
+			"settings":
+			{
+				"buffer_size": 5522,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1896,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"Package Control: instl",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: function",
+				"Snippet: function …"
+			],
+			[
+				"Snippet: fuc",
+				"Snippet: Function Signature"
+			],
+			[
+				"Snippet: funct",
+				"Snippet: Function"
+			],
+			[
+				"Snippet: var",
+				"Snippet: Class Variable"
+			],
+			[
+				"Snippet:var",
+				"Snippet: Class Variable"
+			],
+			[
+				"Snippet: ht",
+				"Snippet: html"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 386.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Torrent/Suits/Suits.S02E04.720p.HDTV.x264-IMMERSE.mkv",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/guess.py",
+		"/D/dev/RoRBlog/blog/config/routes.rb",
+		"/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
+		"/D/dev/RoRBlog/blog/app/views/layouts/application.html.erb",
+		"/D/dev/RoRBlog/blog/app/views/home/index.html.erb",
+		"/D/dev/RoRBlog/blog/app/controllers/home_controller.rb",
+		"/D/dev/TwitterForZombies/db/migrate/20121012142659_add_email_and_rotting_to_zombies.rb",
+		"/D/dev/SubtitlesDownloader/main.py",
+		"/D/dev/TwitterForZombies/db/migrate/20121012142530_add_email_and_rotting_to_zombies.rb",
+		"/D/dev/RoRBlog/blog/app/controllers/application_controller.rb",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/transfo/guess_episodes_rexps.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/patterns.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/transfo/guess_movie_title_from_position.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/transfo/guess_release_group.py",
+		"/D/dev/SubtitlesDownloader/SubtitlesDownloader.sublime-project",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/matcher.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/language.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/hash_mpc.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/country.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/textutils.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/slogging.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/hash_ed2k.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/fileutils.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/date.py",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/matchtree.py",
+		"/D/dev/RoRBlog/app/views/tweets/show.html.erb",
+		"/D/dev/RoRBlog/app/views/users/index.html.erb",
+		"/D/dev/RoRBlog/app/views/tweets/index.html.erb",
+		"/D/dev/RoRBlog/app/models/tweet.rb",
+		"/C/Users/nicol_000/Desktop/mycontacts/app/models/contact.rb",
+		"/D/dev/RoRBlog/config/routes.rb",
+		"/D/dev/RoRBlog/app/controllers/tweets_controller.rb",
+		"/D/dev/RoRBlog/app/controllers/users_controller.rb",
+		"/D/dev/RoRBlog/config/database.yml",
+		"/C/Users/nicol_000/Desktop/mycontacts/app/controllers/contacts_controller.rb",
+		"/D/dev/RoRBlog/db/seeds.rb",
+		"/D/dev/RoRBlog/db/test.sqlite3",
+		"/D/dev/RoRBlog/db/development.sqlite3",
+		"/D/dev/RoRBlog/app/views/tweets/create.html.erb",
+		"/D/dev/RoRBlog/app/views/tweets/edit.html.erb",
+		"/D/dev/RoRBlog/app/views/layouts/show.html.erb",
+		"/D/dev/RoRBlog/app/views/layouts/application.html.erb",
+		"/D/dev/RoRBlog/public/index.html",
+		"/C/Users/nicol_000/Desktop/cesarl-baballe-80f0e0c395b9/dev2/level/main.js",
+		"/D/dev/RoRBlog/config/environments/development.rb",
+		"/D/dev/RoRBlog/app/models/tweet.rd",
+		"/C/Users/nicol_000/Desktop/home_controller.rb",
+		"/C/Users/nicol_000/Desktop/routes.rb",
+		"/C/Users/nicol_000/Desktop/application_controller.rb",
+		"/C/Users/nicol_000/Desktop/contacts_controller.rb",
+		"/D/dev/RoRBlog/script/rails",
+		"/D/dev/RoRBlog/app/controllers/application_controller.rb",
+		"/C/Users/nicol_000/Downloads/betaserie_sub.sdx",
+		"/C/Users/nicol_000/Downloads/conkyrc.sdx",
+		"/D/wamp/www/member/class/Member.class.php",
+		"/D/wamp/www/member/log_out.php",
+		"/D/wamp/www/member/index.php",
+		"/D/wamp/www/member/log_in.php",
+		"/D/wamp/www/member/sign_up.php",
+		"/D/wamp/www/member/common.php",
+		"/C/Users/nicol_000/Desktop/zope.interface-4.0.1/setup.py",
+		"/C/Users/nicol_000/AppData/Local/Temp/Rar$DIa0.192/blog.sql",
+		"/D/wamp/www/member/class/CustomException.class.php",
+		"/D/wamp/bin/apache/apache2.2.22/conf/httpd.conf",
+		"/G/__Dev web/localhost/www/youtube-design/index.html",
+		"/G/__Dev web/localhost/www/youtube-design/css/style.css",
+		"/C/Users/nicol_000/Desktop/lib.php",
+		"/C/Users/nicol_000/Desktop/install.lib.php",
+		"/C/Users/nicol_000/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/D/wamp/www/member/class/MemberManager.class.php",
+		"/D/dev/YoutubeConverter/get_playlist.py",
+		"/C/Users/nicol_000/Desktop/toto.py",
+		"/C/Users/nicol_000/Desktop/change_background.py",
+		"/C/Users/nicol_000/Desktop/test.py",
+		"/C/Users/nicol_000/Desktop/click.py",
+		"/C/Users/nicol_000/Desktop/dombookmarks.pyw",
+		"/C/Users/nicol_000/Desktop/you.py",
+		"/C/Users/nicol_000/Desktop/dl.py",
+		"/C/Users/nicol_000/Desktop/connection.py",
+		"/C/Users/nicol_000/Desktop/aze.py",
+		"/C/Users/nicol_000/Desktop/ez_setup.py",
+		"/C/Users/nicol_000/Desktop/hachoir.py",
+		"/C/Riot Games/League of Legends/RADS/projects/lol_air_client/releases/0.0.0.208/deploy/preferences/global/global.properties",
+		"/C/Users/nicol_000/AppData/Roaming/Sublime Text 2/Packages/HTML/html.sublime-snippet",
+		"/C/Users/nicol_000/AppData/Roaming/Sublime Text 2/Packages/HTML/HTML.sublime-completions",
+		"/C/Users/nicol_000/AppData/Roaming/Sublime Text 2/Packages/PHP/PHPDoc-class-var.sublime-snippet",
+		"/C/Program Files (x86)/Sublime Text 2/Pristine Packages/PHP.sublime-package",
+		"/D/wamp/www/member/modele/Member.php",
+		"/D/wamp/www/LeagueofLegendsItemsChanger/class/ItemChanger.class.php",
+		"/D/wamp/www/member/css/style.css",
+		"/D/wamp/www/member/Member.class.php",
+		"/D/wamp/www/member/css/font/DroidSans/demo.html",
+		"/D/wamp/www/member/style.css",
+		"/D/wamp/www/member/css/font/DroidSans/stylesheet.css",
+		"/D/wamp/www/member/test.php",
+		"/C/Users/nicol_000/Desktop/pytube/get_playlist.py",
+		"/C/Users/nicol_000/Desktop/pytube/convert.py",
+		"/C/Users/nicol_000/Desktop/pytube/__init__.py",
+		"/D/wamp/www/_filmdb/application/modules/administration/controllers/ActeurController.php",
+		"/D/wamp/www/_getYoutubePlaylistContent.php",
+		"/C/Users/nicol_000/AppData/Roaming/Sublime Text 2/Packages/User/untitled.sublime-build",
+		"/C/Users/nicol_000/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/nicol_000/Desktop/pytube/file.txt",
+		"/C/Users/nicol_000/Desktop/eyeD3-0.6.18/src/eyeD3/tag.py",
+		"/C/Users/nicol_000/Desktop/pytube/playlist.py",
+		"/C/Users/nicol_000/Desktop/hachoir-metadata-1.3.3/INSTALL",
+		"/C/Users/nicol_000/Desktop/get_metadata_mp3.py",
+		"/C/Users/nicol_000/Desktop/mutagen-1.20/setup.py",
+		"/C/Python27/Lib/site-packages/eyeD3/tag.py",
+		"/D/wamp/www/tournament/tree_16.html",
+		"/C/Users/nicol_000/Desktop/description.html",
+		"/C/Users/nicol_000/Desktop/html5.html",
+		"/C/Users/nicol_000/Desktop/GoSteven-python-youtube-download-cee1640/youtube/youtube.py",
+		"/D/wamp/www/wordpress/wp-content/themes/cappie/__design/css/blog.css",
+		"/C/Users/nicol_000/Desktop/button.html",
+		"/C/Users/nicol_000/Downloads/get_video_info (1)",
+		"/C/Users/nicol_000/Desktop/GoSteven-python-youtube-download-cee1640/youtube/__init__.py",
+		"/C/Users/nicol_000/Downloads/get_video_info (5)",
+		"/D/wamp/www/wordpress/wp-content/themes/cappie/__design/blog.html",
+		"/D/wamp/www/_epitech.php",
+		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/player.css",
+		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/player.html",
+		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/index.php",
+		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/contact.html",
+		"/C/Users/nicol_000/Desktop/wordpress/loop.php",
+		"/C/Users/nicol_000/Desktop/wordpress/sidebar.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"self.filename",
+			"rexps",
+			"xml",
+			"json",
+			"InvalidArgumentException",
+			"InvalidAr",
+			"catch",
+			"get_for_login",
+			"LoginException",
+			"IdentifiantException",
+			"catch",
+			"FLOOD_LIMIT",
+			"try {",
+			"try",
+			"class SEssion",
+			"getSession()",
+			"trigger_error",
+			"AuthentificationException",
+			"LOG_LOGIN_ERRORS_URL",
+			"LoginException",
+			"Login",
+			"LoginEx",
+			"AuthentificationException",
+			"IdentifiantException",
+			"EmailException",
+			"class",
+			"#sign-up",
+			"css/",
+			"FrameSet",
+			"def frame",
+			"_getNum",
+			"class Tag",
+			"finale",
+			"demi",
+			"quart",
+			"quartquartquartquartquart",
+			"quart",
+			"demi",
+			"finale",
+			"while",
+			"%26",
+			"%3D",
+			"+",
+			"%27",
+			"title",
+			"url",
+			"YT_BASE_URL",
+			"itag",
+			"fmt",
+			"'",
+			"sc-pause"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#sign-up-form",
+			"",
+			"demi",
+			"quart",
+			"huit",
+			"quart",
+			"demi",
+			"&",
+			"=",
+			" ",
+			"'",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"settings":
+					{
+						"buffer_size": 6168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4728,
+								4728
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1845.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
+					"settings":
+					{
+						"buffer_size": 5522,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"guess",
+				"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true
+}
