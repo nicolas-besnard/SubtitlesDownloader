@@ -156,36 +156,34 @@
 	"buffers":
 	[
 		{
-			"file": "main.py",
+			"contents": "Package Control Messages\n========================\n\nSFTP:\n----\n\n  Thanks for installing Sublime SFTP! Below are some quick notes to get you\n  started with the plugin. Please see http://wbond.net/sublime_packages/sftp for\n  the full documentation.\n  \n  \n  There are two major modes of operation:\n  1. Mapping a local folder to a remote folder\n  2. Working off of a server\n  \n  \n  Mapping a Local Folder to a Remote Folder\n  ----\n  \n  To map a local folder to a remote folder, right-click on it in the side bar\n  and select the SFTP/SFTP > Map to Remote... You will enter your connection\n  parameters and a new file will be created named sftp-config.json.\n  \n  Once this file has been saved, all files in that folder and all subfolders\n  will have various operations available via the side bar context menu, editor\n  context menu and command palette.\n  \n  \n  Working off of a Server\n  ----\n  \n  To work off of a server, use the File menu and select SFTP/FTP > Setup Server...\n  You will enter your connection parameters and options then save the file with\n  the name you want to give the connection.\n  \n  Once the server config is saved, you will be automatically connected to the\n  server and you can browse and perform actions via the quick panel.\n  \n  Unfortunely due to limitations of the Sublime Text 2 API, it is not possible\n  to present the remote filesystem in the side bar. There are, however, key\n  bindings for connecting to servers to help reduce the amount of time remote\n  file operations take.\n  \n  \n  Support\n  ----\n  \n  To learn more about the features and settings, please visit\n  http://wbond.net/sublime_packages/sftp.\n  \n  If you are having trouble, please contact me at support@wbond.net. The Support\n  page, http://wbond.net/sublime_packages/sftp/support, includes instructions\n  for capturing a debug log that will be useful if you believe you are\n  experiencing a bug.\n  \n",
 			"settings":
 			{
-				"buffer_size": 6168,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
-			"settings":
-			{
-				"buffer_size": 5522,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1896,
-				"line_ending": "Unix"
+				"buffer_size": 1895,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
 			}
 		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 335.0,
 		"selected_items":
 		[
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:py",
+				"Package Control: Add Repository"
+			],
 			[
 				"Package Control: instl",
 				"Package Control: Install Package"
@@ -236,15 +234,20 @@
 	},
 	"file_history":
 	[
+		"/D/dev/TwitterForZombies/sftp-config.json",
+		"/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
+		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
+		"/D/dev/SubtitlesDownloader/dist/python27.dll",
+		"/D/dev/SubtitlesDownloader/setup.py",
+		"/D/dev/SubtitlesDownloader/main.py",
+		"/D/change_background.py",
 		"/D/Torrent/Suits/Suits.S02E04.720p.HDTV.x264-IMMERSE.mkv",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/guess.py",
 		"/D/dev/RoRBlog/blog/config/routes.rb",
-		"/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
 		"/D/dev/RoRBlog/blog/app/views/layouts/application.html.erb",
 		"/D/dev/RoRBlog/blog/app/views/home/index.html.erb",
 		"/D/dev/RoRBlog/blog/app/controllers/home_controller.rb",
 		"/D/dev/TwitterForZombies/db/migrate/20121012142659_add_email_and_rotting_to_zombies.rb",
-		"/D/dev/SubtitlesDownloader/main.py",
 		"/D/dev/TwitterForZombies/db/migrate/20121012142530_add_email_and_rotting_to_zombies.rb",
 		"/D/dev/RoRBlog/blog/app/controllers/application_controller.rb",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/transfo/guess_episodes_rexps.py",
@@ -256,7 +259,6 @@
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/language.py",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/hash_mpc.py",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/country.py",
-		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/textutils.py",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/slogging.py",
 		"/C/Users/nicol_000/Desktop/guessit-0.5/guessit/hash_ed2k.py",
@@ -359,11 +361,7 @@
 		"/D/wamp/www/wordpress/wp-content/themes/cappie/__design/blog.html",
 		"/D/wamp/www/_epitech.php",
 		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/player.css",
-		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/player.html",
-		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/index.php",
-		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/contact.html",
-		"/C/Users/nicol_000/Desktop/wordpress/loop.php",
-		"/C/Users/nicol_000/Desktop/wordpress/sidebar.php"
+		"/D/wamp/www/cappie013-youtube-player-9c4a422adb86/player.html"
 	],
 	"find":
 	{
@@ -466,83 +464,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "main.py",
 					"settings":
 					{
-						"buffer_size": 6168,
+						"buffer_size": 1895,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4728,
-								4728
+								177,
+								215
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1845.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/nicol_000/Desktop/guessit-0.5/guessit/__init__.py",
-					"settings":
-					{
-						"buffer_size": 5522,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/dev/RoRBlog/blog/app/controllers/posts_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1896,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -584,6 +530,10 @@
 	"output.exec":
 	{
 		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
 	},
 	"replace":
 	{
