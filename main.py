@@ -62,7 +62,7 @@ class Serie:
 							#S01E01
 							(r'(?P<season>[0-9]{1,2})(?P<episode>(?:[Ee][0-9]{1,2})+)[^0-9]', 1),
 							#01x01
-							(r'(?P<season>[0-9]{1,2})(?P<episode>(?:[xX][0-9]{1,2})+)[^0-9](?P<serieName>[a-zA-Z0-9.]*)', 2)						
+							(r'(?P<season>[0-9]{1,2})(?P<episode>(?:[xX][0-9]{1,2})+)[^0-9]', 2)						
 						]
 		# Filename is a path
 		if filename.rfind('\\') != -1:	
@@ -78,8 +78,6 @@ class Serie:
 			elif regex_num == 2:
 				filename = self.fileName[match.end() + 1::]
 			self.serieName = filename.replace('.', ' ')
-			print self.serieName
-			os.system("pause")
 			self.serieSeason = match.groupdict()['season']
 			self.serieEpisode = match.groupdict()['episode'][1::]
 			print self.serieName
