@@ -142,7 +142,9 @@ class Serie:
 			self.downloadSubtitle()
 
 	def downloadSubtitle(self):
+		print self.url
 		print "Download of "+ self.serieName +" S"+ self.serieSeason +"E"+ self.serieEpisode
+		os.system("pause")
 		# define subtitle file name
 		subtitle_file_name = self.serieName + self.serieSeason + self.serieEpisode
 		urlretrieve(self.url, subtitle_file_name)
@@ -182,6 +184,7 @@ if __name__ == "__main__":
 		#name = "[04x01] Glee.avi"
 		name = "Gossip.Girl.S06E01.720p.HDTV.X264-DIMENSION.mkv"
 		name = "[03x01] The Unit.avi"
+		name = "Revolution.2012.S01E01.720p.HDTV.X264-DIMENSION.mkv"
 	
 	subtitle = Serie()
 	subtitle.getSerieInfosFromFilename(name)
