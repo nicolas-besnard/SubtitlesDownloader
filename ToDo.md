@@ -1,0 +1,1 @@
+- Vérifier le type du ficher de sous-tires : ce n'est pas forcement un zip

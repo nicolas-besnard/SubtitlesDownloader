@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"insta",
+				"install_dir"
+			],
+			[
+				"crea",
+				"create_registery_entry"
+			],
+			[
+				"in",
+				"install_dirname"
+			],
+			[
+				"Downloa",
+				"DownloadSubtitle"
+			],
+			[
+				"Down",
+				"DownloadSubtitle"
+			],
+			[
 				"get",
 				"getFiletype"
 			],
@@ -155,14 +175,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "main.py",
-			"settings":
-			{
-				"buffer_size": 6360,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
@@ -232,11 +244,17 @@
 	},
 	"file_history":
 	[
+		"/D/dev/SubtitlesDownloader/create_install.py",
+		"/D/dev/SubtitlesDownloader/create_main.py",
+		"/D/dev/SubtitlesDownloader/main.py",
+		"/C/Users/nicol_000/AppData/Local/Temp/Rar$DIa0.688/SubtitlesFinder.lua",
+		"/D/dev/SubtitlesDownloader/ToDo.md",
+		"/D/dev/SubtitlesDownloader/install.py",
+		"/D/dev/SubtitlesDownloader/Revolution (2012)0101",
 		"/C/Users/nicol_000/Desktop/post.py",
 		"/D/wamp/www/test/index.html",
 		"/D/wamp/www/test/readme.html",
 		"/D/wamp/www/test/mediaplayer-5.10-viral/readme.html",
-		"/D/dev/SubtitlesDownloader/main.py",
 		"/D/wamp/www/test/test.html",
 		"/D/test.html",
 		"/D/dev/TwitterForZombies/sftp-config.json",
@@ -353,13 +371,7 @@
 		"/C/Users/nicol_000/Desktop/get_metadata_mp3.py",
 		"/C/Users/nicol_000/Desktop/mutagen-1.20/setup.py",
 		"/C/Python27/Lib/site-packages/eyeD3/tag.py",
-		"/D/wamp/www/tournament/tree_16.html",
-		"/C/Users/nicol_000/Desktop/description.html",
-		"/C/Users/nicol_000/Desktop/html5.html",
-		"/C/Users/nicol_000/Desktop/GoSteven-python-youtube-download-cee1640/youtube/youtube.py",
-		"/D/wamp/www/wordpress/wp-content/themes/cappie/__design/css/blog.css",
-		"/C/Users/nicol_000/Desktop/button.html",
-		"/C/Users/nicol_000/Downloads/get_video_info (1)"
+		"/D/wamp/www/tournament/tree_16.html"
 	],
 	"find":
 	{
@@ -377,6 +389,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"os",
 			"avi",
 			"mp4",
 			"self.filename",
@@ -459,39 +472,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "main.py",
-					"settings":
-					{
-						"buffer_size": 6360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4403,
-								4403
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1305.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

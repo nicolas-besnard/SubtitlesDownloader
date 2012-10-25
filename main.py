@@ -10,6 +10,7 @@ from xml.dom.minidom import parseString
 import zipfile
 import hashlib
 import json
+import glob
 
 class Serie:
 	"""
@@ -17,7 +18,6 @@ class Serie:
 	
 	subtitles_exts = ['.srt']
 	
-
 	def __init__(self):
 		self.apiKey = "260563B3BDEA"
 		self.defaultUrl = "http://api.betaseries.com/"
@@ -160,35 +160,11 @@ class Serie:
 		zFile.close()
 		os.remove(subtitle_file_name)
 
-import glob
-import urlparse
 if __name__ == "__main__":
-	"""
-	name1 = "Suits.S02E11.720p.HDTV.x264-AVS.avi"
-	name = "[02x11] Suits.avi"
-	sample = [
-				("Suits.S02E11.720p.HDTV.x264-AVS.avi")
-			 ]
-
-	filetype(name)
-	
-	
-	"""
 	if (len(sys.argv) >= 2):
-		name = sys.argv[1]
-	else:
-		name = "Suits.S02E11.720p.HDTV.x264-AVS"
-		name = "90210.S05E01.720p.HDTV.x264-EVOLVE"
-		name = "Gossip.Girl.S06E01.720p.HDTV.X264-DIMENSION.avi"
-		name = "[02x01] Suits.mkv"
-		#name = "[04x01] Glee.avi"
-		name = "Gossip.Girl.S06E01.720p.HDTV.X264-DIMENSION.mkv"
-		name = "[03x01] The Unit.avi"
-		name = "Revolution.2012.S01E01.720p.HDTV.X264-DIMENSION.mkv"
-	
-	subtitle = Serie()
-	subtitle.getSerieInfosFromFilename(name)
-	#subtitle.getSerieInfosFromInput()
+		name = sys.argv[1]	
+		subtitle = Serie()
+		subtitle.getSerieInfosFromFilename(name)
 
 	"""url = "http://api.betaseries.com/subtitles/show/suits.xml?language=VF&season=1&episode=1&key=260563B3BDEA&format=json"
 	serie = urlopen(url)
@@ -197,17 +173,6 @@ if __name__ == "__main__":
 	json_data = json.loads(content)
 	data = json_data['root']
 	print data['subtitles']['0']"""
-	"""
-	if (len(sys.argv) >= 2):
-		name = sys.argv[1]
-	else:
-		name = "Suits.S02E11.720p.HDTV.x264-AVS"
-		#name = "[04x01] Glee.avi"
-	
-	subtitle = Serie()
-	subtitle.getSerieInfosFromFilename(name)
-	#subtitle.getSerieInfosFromInput()
-	"""
 	"""for nomfich in glob.glob(r'G:/Series/Suits/*.mkv'):
 		print nomfich 
 	print "-"*20"""
