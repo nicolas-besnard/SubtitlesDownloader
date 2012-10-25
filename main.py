@@ -144,7 +144,6 @@ class Serie:
 	def downloadSubtitle(self):
 		print self.url
 		print "Download of "+ self.serieName +" S"+ self.serieSeason +"E"+ self.serieEpisode
-		os.system("pause")
 		# define subtitle file name
 		subtitle_file_name = self.serieName + self.serieSeason + self.serieEpisode
 		urlretrieve(self.url, subtitle_file_name)
