@@ -1,4 +1,4 @@
-# -*- coding:UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 import re
 import os
@@ -138,8 +138,11 @@ class Serie:
 			print "Not subtitles available at this time in "+ self.subtitlesLanguage +"."
 			os.system("pause")
 		else:
+			for url in dom.getElementsByTagName('subtitle'):
+				print url.getElementsByTagName('file')[0].toxml().replace('<file>','').replace('</file>','')
+				print url.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>','')
 			self.url = dom.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>','')
-			self.downloadSubtitle()
+			#self.downloadSubtitle()
 
 	def downloadSubtitle(self):
 		print self.url
