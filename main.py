@@ -12,7 +12,11 @@ import hashlib
 import json
 import glob
 
-class Serie:
+from            PySide.QtCore   import *
+from            PySide.QtGui    import *
+
+
+class Serie(QDialog):
 	"""
 	"""
 	
@@ -33,7 +37,35 @@ class Serie:
 		self.fileExtension = ""
 		self.allowed_video_ext = ['avi', 'mkv', 'mp4']
 		#self.password = hashlib.md5("toto").hexdigest()
+		super(Serie, self).__init__()
+		self.initUI()
 
+	def initUI(self):
+		#Layout
+		layout_list = QGridLayout()
+        
+		self.setGeometry(300, 300, 300, 150)
+		self.setWindowTitle("icon")
+		
+		#list
+		self.listWidget = QListWidget(self)
+		layout_list.addWidget(self.listWidget)
+			
+                #button
+		btn_download = QPushButton("Download", self)
+		btn_download.clicked.connect(self.btnDownload, )
+		layout_list.addWidget(btn_download)
+		
+		self.setLayout(layout_list)
+		
+
+	def btnDownload(self):
+		"""
+		"""
+		print self.listWidget.currentItem().data(1)
+		self.url = self.listWidget.currentItem().data(1)
+		self.downloadSubtitle()
+	
 	def getFiletype(self, fileName):
 		info = os.path.splitext(fileName)
 		return (info[0], info[1][1::].lower())
@@ -139,9 +171,15 @@ class Serie:
 			os.system("pause")
 		else:
 			for url in dom.getElementsByTagName('subtitle'):
-				print url.getElementsByTagName('file')[0].toxml().replace('<file>','').replace('</file>','')
-				print url.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>','')
+				tmp_file = url.getElementsByTagName('file')[0].toxml().replace('<file>','').replace('</file>','')
+				tmp_url = url.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>','')
+				item = QListWidgetItem(tmp_file)
+				item.setData(1, tmp_url)
+				self.listWidget.insertItem(1, item)
+				
+
 			self.url = dom.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>','')
+			self.show()
 			#self.downloadSubtitle()
 
 	def downloadSubtitle(self):
@@ -163,10 +201,12 @@ class Serie:
 		os.remove(subtitle_file_name)
 
 if __name__ == "__main__":
+	app = QApplication(sys.argv)
 	if (len(sys.argv) >= 2):
 		name = sys.argv[1]	
 		subtitle = Serie()
 		subtitle.getSerieInfosFromFilename(name)
+	sys.exit(app.exec_())
 
 	"""url = "http://api.betaseries.com/subtitles/show/suits.xml?language=VF&season=1&episode=1&key=260563B3BDEA&format=json"
 	serie = urlopen(url)
