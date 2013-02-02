@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: UTF-8 -*-
 
 import re
 import os
@@ -12,8 +12,8 @@ import hashlib
 import json
 import glob
 
-from            PySide.QtCore   import *
-from            PySide.QtGui    import *
+from PySide.QtCore import *
+from PySide.QtGui import *
 
 
 class Serie(QDialog):
@@ -201,12 +201,13 @@ class Serie(QDialog):
 		os.remove(subtitle_file_name)
 
 if __name__ == "__main__":
-	app = QApplication(sys.argv)
+	
 	if (len(sys.argv) >= 2):
+		app = QApplication(sys.argv)
 		name = sys.argv[1]	
 		subtitle = Serie()
 		subtitle.getSerieInfosFromFilename(name)
-	sys.exit(app.exec_())
+		sys.exit(app.exec_())
 
 	"""url = "http://api.betaseries.com/subtitles/show/suits.xml?language=VF&season=1&episode=1&key=260563B3BDEA&format=json"
 	serie = urlopen(url)
