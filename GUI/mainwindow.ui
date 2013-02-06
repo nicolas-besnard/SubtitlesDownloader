@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>860</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>411</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="fileListLayout" columnstretch="0">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinAndMaxSize</enum>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QListWidget" name="fileList"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>10</y>
+      <width>411</width>
+      <height>179</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="searchInfosLayout">
+     <item row="3" column="1" colspan="2">
+      <widget class="QPushButton" name="searchBtn">
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="3">
+      <widget class="QLineEdit" name="showInput"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="directoryLabel">
+       <property name="text">
+        <string>Directory</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="episodeLabel">
+       <property name="text">
+        <string>Episode</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLineEdit" name="episodeInput"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="showLabel">
+       <property name="text">
+        <string>Show</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="seasonLabel">
+       <property name="text">
+        <string>Season</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="seasonInput"/>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QLineEdit" name="directoryInput"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>860</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>fileList</tabstop>
+  <tabstop>showInput</tabstop>
+  <tabstop>seasonInput</tabstop>
+  <tabstop>episodeInput</tabstop>
+  <tabstop>directoryInput</tabstop>
+  <tabstop>searchBtn</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
