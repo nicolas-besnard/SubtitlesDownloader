@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>860</width>
-    <height>420</height>
+    <width>640</width>
+    <height>260</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>411</width>
-      <height>331</height>
+      <width>321</width>
+      <height>181</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="fileListLayout" columnstretch="0">
@@ -33,25 +33,25 @@
      <item row="0" column="0">
       <widget class="QListWidget" name="fileList"/>
      </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="downloadBtn">
+       <property name="text">
+        <string>Download</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>340</x>
       <y>10</y>
-      <width>411</width>
+      <width>290</width>
       <height>179</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="searchInfosLayout">
-     <item row="3" column="1" colspan="2">
-      <widget class="QPushButton" name="searchBtn">
-       <property name="text">
-        <string>Search</string>
-       </property>
-      </widget>
-     </item>
      <item row="0" column="1" colspan="3">
       <widget class="QLineEdit" name="showInput"/>
      </item>
@@ -72,12 +72,8 @@
      <item row="1" column="3">
       <widget class="QLineEdit" name="episodeInput"/>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="showLabel">
-       <property name="text">
-        <string>Show</string>
-       </property>
-      </widget>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="seasonInput"/>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="seasonLabel">
@@ -86,11 +82,32 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="seasonInput"/>
+     <item row="0" column="0">
+      <widget class="QLabel" name="showLabel">
+       <property name="text">
+        <string>Show</string>
+       </property>
+      </widget>
      </item>
      <item row="2" column="1" colspan="3">
       <widget class="QLineEdit" name="directoryInput"/>
+     </item>
+     <item row="3" column="2" colspan="2">
+      <widget class="QPushButton" name="searchBtn">
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QCheckBox" name="HDSelected">
+       <property name="text">
+        <string>HD</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="languagesComboBox"/>
      </item>
     </layout>
    </widget>
@@ -109,7 +126,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>860</width>
+     <width>640</width>
      <height>25</height>
     </rect>
    </property>
@@ -117,12 +134,10 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>fileList</tabstop>
   <tabstop>showInput</tabstop>
   <tabstop>seasonInput</tabstop>
   <tabstop>episodeInput</tabstop>
   <tabstop>directoryInput</tabstop>
-  <tabstop>searchBtn</tabstop>
  </tabstops>
  <resources/>
  <connections/>

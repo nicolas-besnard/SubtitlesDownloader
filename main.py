@@ -20,22 +20,36 @@ from	form		import *
 
 
 
-class GUI(Ui_MainWindow):
-	def __init__(self):
-		self.app = QtGui.QApplication(sys.argv)
-		self.window = QtGui.QMainWindow()
-		self.setupUi(self.window)
+class GUI(QMainWindow):
+	def __init__(self, parent = None):
+		QMainWindow.__init__(self)
+		ui = Ui_MainWindow()
+		self.ui = ui
+		ui.setupUi(self)
+		self.init_languageComboBox()
+
+	def init_languageComboBox(self):
+		self.ui.languagesComboBox.addItem("French", 0)
+		self.ui.languagesComboBox.addItem("English", 1)
 		
 	def showWindow(self):
-		self.window.show()
-		sys.exit(self.app.exec_())
+		self.show()
 
 	def clearFileList(self):
-		self.fileList.clear()
+		self.ui.fileList.clear()
 
-	def addElemToFileList(self, elem):
-		self.fileList.insertItem(1, elem)
+	def addElemToFileList(self, tmp_file, tmp_url):
+		item = QtGui.QListWidgetItem(tmp_file)
+		item.setData(12, tmp_url)
+		self.ui.fileList.insertItem(12, item)
 
+class GUI_Form(QMainWindow):
+	def __init__(self, parent = None):
+		self.window = QtGui.QMainWindow()
+		ui = Ui_Form()
+		self.ui = ui
+		ui.setupUi(self.window)
+		
 class Serie(GUI):
 	"""
 	"""	
@@ -43,30 +57,44 @@ class Serie(GUI):
 	
 	def __init__(self, directory, filename = ""):
 		GUI.__init__(self)
-		self.directoryInput.setText(directory)
+		self.ui.directoryInput.setText(directory)
 		self.apiKey = "260563B3BDEA"
 		self.defaultUrl = "http://api.betaseries.com/"
 		self.errorCode = -1
 		self.subtitlesLanguage = "VF"
-		self.show = ""
+		self.subtitlesHD = false
+		self.serieName = ""
 		self.season = ""
 		self.episode = ""
-		self.showFromServer = ""
+		self.serieNameFromServer = ""
 		self.login = "cappie013"
 		self.password = "fa35ad09c9f866b03507db0c441a1194"
 		self.filename = filename
 		self.fileExtension = ""
 		self.allowed_video_ext = ['avi', 'mkv', 'mp4']
-		self.searchBtn.clicked.connect(self.doSearch)
+		self.ui.searchBtn.clicked.connect(self.doSearch)
+		self.ui.downloadBtn.clicked.connect(self.doDownload)
 		#self.password = hashlib.md5("toto").hexdigest()
 
 	def doSearch(self):
 		self.clearFileList()
-		self.show = self.showInput.text()
-		self.season = self.seasonInput.text()
-		self.episode = self.episodeInput.text()
-		if (self.show and self.season and self.episode):
+		self.serieName = self.ui.showInput.text()
+		self.season = self.ui.seasonInput.text()
+		self.episode = self.ui.episodeInput.text()
+		self.subtitlesHD = self.ui.HDSelected.isChecked()
+		languageSelected = self.ui.languagesComboBox.itemData(self.ui.languagesComboBox.currentIndex())
+		if (languageSelected == 0):
+			self.subtitlesLanguage = "VF"
+		else:
+			self.subtitlesLanguage = "VO"
+		if (self.serieName and self.season and self.episode):
 			self.getSerieNameFromServer()
+
+	def doDownload(self):
+		if self.ui.fileList.currentItem():
+			print self.ui.fileList.currentItem().data(12)
+			#self.url = self.ui.fileList.currentItem().data(1)
+			#self.downloadSubtitle()
 		
 	def getFiletype(self, fileName):
 		info = os.path.splitext(fileName)
@@ -112,10 +140,10 @@ class Serie(GUI):
 				self.filename = self.fileName[0:match.start() - 2]
 			elif regex_num == 2:
 				self.filename = self.fileName[match.end() + 1::]
-			self.show = self.filename.replace('.', ' ')
+			self.serieName = self.filename.replace('.', ' ')
 			self.season = match.groupdict()['season']
 			self.episode = match.groupdict()['episode'][1::]
-			self.showInput.setText(self.show)
+			self.showInput.setText(self.serieName)
 			self.seasonInput.setText(self.season)
 			self.episodeInput.setText(self.episode)
 			self.getSerieNameFromServer()
@@ -127,41 +155,39 @@ class Serie(GUI):
 		Getting serie's name from the server
 		"""
 		modele = "shows/search.xml"
-		param = "title={}".format(self.show)
+		param = "title={}".format(self.serieName)
 		serie = urlopen(self.urlConstructor(modele, param))
 		content = serie.read()
 		serie.close()
 		dom = parseString(content)
 		if len(dom.getElementsByTagName('url')) == 0:
-			print "Serie not found : "+ self.show
+			print "Serie not found : "+ self.serieName
 		else:
 			self.showFromServer = dom.getElementsByTagName('url')[0].toxml().replace('<url>', '').replace('</url>', '')
-			self.show = dom.getElementsByTagName('title')[0].toxml().replace('<title>', '').replace('</title>', '')			
+			self.serieNameFromServer = dom.getElementsByTagName('title')[0].toxml().replace('<title>', '').replace('</title>', '')			
 			self.searchSubtitle()
 
 	def searchSubtitle(self):
-		modele = "subtitles/show/{}.xml".format(self.showFromServer)
+		modele = "subtitles/show/{}.xml".format(self.serieNameFromServer)
 		param = "season={}&episode={}&language={}".format(self.season, self.episode, self.subtitlesLanguage)
 		subtitles = urlopen(self.urlConstructor(modele, param))
 		content = subtitles.read()
 		subtitles.close()
 		dom = parseString(content)
 		if len(dom.getElementsByTagName('url')) == 0:
-			print "Not subtitles available at this time in "+ self.subtitlesLanguage +"."
+			print "No subtitles available at this time in "+ self.subtitlesLanguage +"."
 		else:
 			for url in dom.getElementsByTagName('subtitle'):
 				tmp_file = url.getElementsByTagName('file')[0].toxml().replace('<file>','').replace('</file>', '')
 				tmp_url = url.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>', '')
-				item = QtGui.QListWidgetItem(tmp_file)
-				item.setData(1, tmp_url)
-				self.addElemToFileList(item)
+				self.addElemToFileList(tmp_file, tmp_url)
 				self.url = dom.getElementsByTagName('url')[0].toxml().replace('<url>','').replace('</url>','')
 				
 	def downloadSubtitle(self):
 		print self.url
-		print "Download of "+ self.show +" S"+ self.season +"E"+ self.episode
+		print "Download of "+ self.serieName +" S"+ self.season +"E"+ self.episode
 		# define subtitle file name
-		subtitle_file_name = self.show + self.season + self.episode
+		subtitle_file_name = self.serieName + self.season + self.episode
 		urlretrieve(self.url, subtitle_file_name)
 		zFile = zipfile.ZipFile(subtitle_file_name, "r")
 		for data in zFile.infolist():
@@ -174,25 +200,20 @@ class Serie(GUI):
 		zFile.close()
 		os.remove(subtitle_file_name)
 
-
 if __name__ == "__main__":
+	# Init App
+	app = QtGui.QApplication(sys.argv)
+	
 	if (len(sys.argv) >= 2):
 		test = Serie(os.getcwd(), sys.argv[1])
 		test.getSerieInfosFromFilename()
-
 	else:
 		test = Serie(os.getcwd())
-test.showWindow()
+	test.show()
+	sys.exit(app.exec_())
 
 """
-if __name__ == "__main__":
-	
-	if (len(sys.argv) >= 2):
-		app = QApplication(sys.argv)
-		name = sys.argv[1]	
-		subtitle = Serie()
-		subtitle.getSerieInfosFromFilename(name)
-		sys.exit(app.exec_())
+# J S O N  T E S T
 url = "http://api.betaseries.com/subtitles/show/suits.xml?language=VF&season=1&episode=1&key=260563B3BDEA&format=json"
 	serie = urlopen(url)
 	content = serie.read()
@@ -205,6 +226,4 @@ url = "http://api.betaseries.com/subtitles/show/suits.xml?language=VF&season=1&e
 	print "-"*20
 	
 	dir_content = os.listdir(r'G:/Series/Suits')
-
-
-	"""
+"""
