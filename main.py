@@ -15,33 +15,11 @@ import glob
 from PySide.QtCore import *
 from PySide.QtGui import *
 
-from	abc		import ABCMeta, abstractmethod
-
-
 from	gui		import *
 from	form		import *
 
 
-class GenerateWindow(object):
-	"""
-	ABSTRACT
-	
-	"""
-	
-	def __init__(self):
-		"""
-		"""
-		self.app = QtGui.QApplication(sys.argv)
-		self.window = QtGui.QMainWindow()
-		self.setupUi(self.window)
 
-	def showWindow(self):
-		"""
-		"""
-		self.window.show()
-		sys.exit(self.app.exec_())
-		
-"""
 class GUI(Ui_MainWindow):
 	def __init__(self):
 		self.app = QtGui.QApplication(sys.argv)
@@ -57,21 +35,7 @@ class GUI(Ui_MainWindow):
 
 	def addElemToFileList(self, elem):
 		self.fileList.insertItem(1, elem)
-"""
-class GUI(Ui_MainWindow):
-	def showWindow(self):
-		print "toto"
-		
-"""
-class ListTar(Ui_Form):
-	def __init__(self):
-		self.app = QtGui.QApplication(sys.argv)
-		sefl.window = QtGui.QMainWindow()
-		self.setupUi(self.window)
-		
-	def showWindow(self):
-		
-"""		
+
 class Serie(GUI):
 	"""
 	"""	
@@ -210,9 +174,7 @@ class Serie(GUI):
 		zFile.close()
 		os.remove(subtitle_file_name)
 
-test = GUI()
-GUI.showWindow()
-"""
+
 if __name__ == "__main__":
 	if (len(sys.argv) >= 2):
 		test = Serie(os.getcwd(), sys.argv[1])
@@ -222,25 +184,7 @@ if __name__ == "__main__":
 		test = Serie(os.getcwd())
 test.showWindow()
 
-if __name__ == "__main__":		 
-	app = QtGui.QApplication(sys.argv)
-	MainWindow = QtGui.QMainWindow()
-	ui = Ui_MainWindow()
-	ui.setupUi(MainWindow)
-
-	test = Serie("suits", "01", "01")
-	test.getSerieNameFromServer()
-	if (len(sys.argv) >= 2):
-		# Get file information
-		ui.showInput.setText("show")
-		ui.seasonInput.setText("season")
-		ui.episodeInput.setText("episode")
-
-	ui.searchBtn.clicked.connect(do_search)
-	ui.directoryInput.setText(os.getcwd())
-	MainWindow.show()
-	sys.exit(app.exec_())		
-
+"""
 if __name__ == "__main__":
 	
 	if (len(sys.argv) >= 2):
