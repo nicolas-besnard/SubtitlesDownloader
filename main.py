@@ -27,34 +27,28 @@ class GenerateWindow(object):
 	ABSTRACT
 	
 	"""
-	__metaclass__ = ABCMeta
+	
 	def __init__(self):
 		"""
 		"""
-		self.app = QtGui.QApplication()
+		self.app = QtGui.QApplication(sys.argv)
 		self.window = QtGui.QMainWindow()
-		self.setupUi(self.windows)
+		self.setupUi(self.window)
+
 	def showWindow(self):
 		"""
 		"""
 		self.window.show()
 		sys.exit(self.app.exec_())
-	
-
-class GUI(Ui_MainWindow):
-	"""
-	"""	
-	def __init__(self):
-		"""
 		
-		"""
+"""
+class GUI(Ui_MainWindow):
+	def __init__(self):
 		self.app = QtGui.QApplication(sys.argv)
 		self.window = QtGui.QMainWindow()
 		self.setupUi(self.window)
 		
 	def showWindow(self):
-		"""
-		"""
 		self.window.show()
 		sys.exit(self.app.exec_())
 
@@ -63,22 +57,21 @@ class GUI(Ui_MainWindow):
 
 	def addElemToFileList(self, elem):
 		self.fileList.insertItem(1, elem)
-
+"""
+class GUI(Ui_MainWindow):
+	def showWindow(self):
+		print "toto"
+		
+"""
 class ListTar(Ui_Form):
-	"""
-	"""
 	def __init__(self):
-		"""
-                """
 		self.app = QtGui.QApplication(sys.argv)
 		sefl.window = QtGui.QMainWindow()
 		self.setupUi(self.window)
 		
 	def showWindow(self):
-		"""
-		"""
 		
-		
+"""		
 class Serie(GUI):
 	"""
 	"""	
@@ -217,7 +210,9 @@ class Serie(GUI):
 		zFile.close()
 		os.remove(subtitle_file_name)
 
-
+test = GUI()
+GUI.showWindow()
+"""
 if __name__ == "__main__":
 	if (len(sys.argv) >= 2):
 		test = Serie(os.getcwd(), sys.argv[1])
@@ -227,8 +222,6 @@ if __name__ == "__main__":
 		test = Serie(os.getcwd())
 test.showWindow()
 
-
-"""
 if __name__ == "__main__":		 
 	app = QtGui.QApplication(sys.argv)
 	MainWindow = QtGui.QMainWindow()

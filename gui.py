@@ -14,7 +14,28 @@ try:
 except AttributeError:
     _fromUtf8 = lambda s: s
 
-class Ui_MainWindow(object):
+import sys
+class GenerateWindow(object):
+    """
+    ABSTRACT
+    
+    """
+    
+    def __init__(self):
+        """
+        """
+        self.app = QtGui.QApplication(sys.argv)
+        self.window = QtGui.QMainWindow()
+        self.setupUi(self.window)
+
+    def showWindow(self):
+        """
+        """
+        self.window.show()
+        sys.exit(self.app.exec_())
+        
+
+class Ui_MainWindow(GenerateWindow):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
         MainWindow.resize(860, 420)
